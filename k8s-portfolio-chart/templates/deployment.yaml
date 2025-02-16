@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s_portfolio_deployment
+  name: k8s-portfolio-deployment
   labels:
     app: k8s_portfolio
 spec:
