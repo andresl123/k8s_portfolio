@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: k8s-portfolio-deployment
   labels:
-    app: k8s_portfolio
+    app: k8s-portfolio
 spec:
   replicas: 0
   selector:
     matchLabels:
-      app: k8s_portfolio
+      app: k8s-portfolio
   template:
     metadata:
       labels:
-        app: k8s_portfolio
+        app: k8s-portfolio
     spec:
       containers:
-      - name: k8s_portfolio
+      - name: k8s-portfolio
         image: {{ .Values.image }}
