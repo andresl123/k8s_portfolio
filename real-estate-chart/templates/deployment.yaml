@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s_portfolio_deployment
+  labels:
+    app: k8s_portfolio
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: k8s_portfolio
+  template:
+    metadata:
+      labels:
+        app: k8s_portfolio
+    spec:
+      containers:
+      - name: k8s_portfolio
+        image: {{ .Values.image }}
