@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Kubernetes Cluster</title>
+    <title>In Development</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
             padding: 20px;
             background: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
         }
         h1 {
             color: #333;
         }
-        p {
-            line-height: 1.6;
-            color: #555;
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Home Kubernetes Cluster for Real Estate Application</h1>
-        <p>I have set up a Kubernetes cluster at home to practice and host a real estate application.</p>
-        
-        <h2>Deployment Workflow</h2>
-        <p><strong>GitHub Actions:</strong> Automates the build process and creates a Docker image.</p>
-        <p><strong>ArgoCD:</strong> Deploys the application to my Kubernetes cluster.</p>
-        
-        <h2>Monitoring</h2>
-        <p><strong>Prometheus:</strong> Collects real-time metrics from the application.</p>
-        <p><strong>Grafana:</strong> Visualizes metrics through dashboards.</p>
-        
-        <h2>Infrastructure</h2>
-        <p>Running on ARM64 architecture with persistent storage and a load balancer for traffic management.</p>
+        <h1>🚧 In Development 🚧</h1>
+        <p>We are working on something awesome! Stay tuned.</p>
+        <p>In the meantime, you can check the status of my cluster on Grafana using the button below.</p>
+        <a href="http://asl.serveblog.net:8383/dashboard/snapshot/M5DwUgNWO2hlV0j6auEAs7IrZL9Btwe3" class="button" target="_blank">Dashboard Snapshot</a>
+
     </div>
 </body>
 </html>
