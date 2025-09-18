@@ -18,3 +18,23 @@ spec:
       - name: k8s-portfolio
         image: {{ .Values.image }}
         imagePullPolicy: Always
+        volumeMounts:
+          - name: nginx-config
+            mountPath: /etc/nginx/nginx.config
+            subPath: nginx.config
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-custom-config
