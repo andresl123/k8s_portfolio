@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: k8s-portfolio
   name: k8s-portfolio
 spec:
   selector:
