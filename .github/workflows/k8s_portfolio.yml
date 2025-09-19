@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      #IMAGE: ${{ secrets.DOCKER_HUB_USERNAME }}/k8s_portfolio
+      IMAGE: ${{ secrets.DOCKER_HUB_USERNAME }}/k8s_portfolio
       TAG: ${{ github.run_number }}
-      #VALUES_FILE: k8s-portfolio-chart/values.yaml
+      VALUES_FILE: k8s-portfolio-chart/values.yaml
     
     steps:
     - name: Log in to Docker Hub
