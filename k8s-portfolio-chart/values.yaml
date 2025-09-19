@@ -1,1 +1,3 @@
-image: andresl123/k8s_portfolio:1
+image:
+  repository: andresl123/k8s_portfolio
+  tag: "1"
