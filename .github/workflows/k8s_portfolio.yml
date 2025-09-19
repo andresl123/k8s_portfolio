@@ -33,7 +33,7 @@ jobs:
 
     - name: Write run number to values.yaml
       run: |
-        yq -i '.image = "andresl123/k8s_portfolio:" + strenv(TAG)' k8s_portfolio/k8s-portfolio-chart/values.yaml
+        yq -i '.image = "andresl123/k8s_portfolio:" + strenv(TAG)' k8s-portfolio-chart/values.yaml
 
     - name: Installing buildx to create image arm64
       run: docker buildx create --use
