@@ -1,3 +1,1 @@
-image:
-  repository: andresl123/k8s_portfolio
-  tag: "39"
+image: andresl123/k8s_portfolio:39
