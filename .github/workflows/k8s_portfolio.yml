@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE: ${{ secrets.DOCKER_HUB_USERNAME }}/k8s_portfolio
+      #IMAGE: ${{ secrets.DOCKER_HUB_USERNAME }}/k8s_portfolio
       TAG: ${{ github.run_number }}
-      VALUES_FILE: k8s-portfolio-chart/values.yaml
+      #VALUES_FILE: k8s-portfolio-chart/values.yaml
     
     steps:
     - name: Log in to Docker Hub
@@ -31,9 +31,9 @@ jobs:
         sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.3/yq_linux_amd64
         sudo chmod +x /usr/local/bin/yq
 
-    - name: Write run number to values.yaml   # 👈 your step goes here
+    - name: Write run number to values.yaml
       run: |
-        yq -i '.image.tag = strenv(TAG)' "${VALUES_FILE}"
+        yq -i '.image = "andresl123/k8s_portfolio:" + strenv(TAG)' values.yaml
 
     - name: Installing buildx to create image arm64
       run: docker buildx create --use
