@@ -36,6 +36,6 @@ spec:
           initialDelaySeconds: 15
           periodSeconds: 20
         volumes:
-        - name: nginx-config
-          configMap:
-            name: nginx-custom-config
+          - name: nginx-config
+            configMap:
+              name: nginx-custom-config
