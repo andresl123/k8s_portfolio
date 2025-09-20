@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-http01
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect-port: "8443"
+  name: my-resume-ingress
+  namespace: k8s-portfolio
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: asl.serveblog.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: k8s-portfolio
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - asl.serveblog.net
+    secretName: resume-tls
