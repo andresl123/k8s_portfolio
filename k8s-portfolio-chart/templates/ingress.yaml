@@ -18,7 +18,7 @@ spec:
             name: k8s-portfolio
             port:
               number: 80
-        path: /
+        path: /resume
         pathType: Prefix
   tls:
   - hosts:
